@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+    class employee{
+        private int employeeId;
+        private String employeeName;
+        int getEmployeeId(){
+            return employeeId;
+        }
+        public void setEmployeeId(int employeeId){
+            this.employeeId = employeeId;
+        }
+        public String getEmployeeName(){
+            return employeeName;
+        }
+        public void setEmployeeName(String employeeName){
+            this.employeeName = employeeName;
+        }
+        public void displayDesignation(String designation){
+            System.out.println("Designation:"+ designation);
+        }
+    }
+    public class Main{
+        public static void main(String[]args) {
+
+            Scanner sc = new Scanner(System.in);
+            employee emp = new employee();
+
+            System.out.println("Enter Employee ID:");
+            int id = sc.nextInt();
+
+            System.out.println("Enter Employee Name:");
+            String name = sc.nextLine();
+
+            System.out.println("Enter Employee Designation:");
+            String designation = sc.nextLine();
+
+            emp.setEmployeeId(id);
+            emp.setEmployeeName(name);
+
+            System.out.println("Employee Details");
+            System.out.println("Employee ID:" + emp.getEmployeeId());
+            System.out.println("Employee Name:" + emp.getEmployeeName());
+
+            emp.displayDesignation(designation);
+
+            sc.close();
+        }
+}
